@@ -1,3 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse | Your Universe of Learning</title>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind configuration (set before CDN load) -->
+    <script>
+        window.tailwind = window.tailwind || {};
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary': '#4f46e5',
+                'secondary': '#10b981',
+                'light': '#e0e7ff'
+              }
+            }
+          }
+        }
+    </script>
+
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom site styles (overrides & extra rules) -->
+    <link rel="stylesheet" href="site.css">
+</head>
+<body class="min-h-screen antialiased text-gray-800 font-sans">
+
+    <!-- Header & Navigation -->
+    <header class="shadow-lg bg-white sticky top-0 z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Brand Name -->
+            <a href="#" class="text-3xl font-extrabold text-primary flex items-center group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2 group-hover:rotate-12 transition duration-500" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-5-8a1 1 0 011-1h6a1 1 0 110 2H6a1 1 0 01-1-1zm5 4a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M3 10a7 7 0 1114 0 7 7 0 01-14 0zm8 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                </svg>
+                EduVerse
+            </a>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-600 hover:text-primary font-medium transition duration-300">Features</a>
+                <a href="#courses" class="text-gray-600 hover:text-primary font-medium transition duration-300">Courses</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-primary font-medium transition duration-300">Reviews</a>
+            </div>
+
+            <!-- Call to Action Button -->
+            <a href="#" class="hidden sm:inline-block bg-secondary text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-emerald-600 transition duration-300 transform hover:scale-105">
+                Start Free Trial
+            </a>
+        </nav>
+        <!-- Mobile menu (slides down) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#features" class="block text-gray-700">Features</a>
+                <a href="#courses" class="block text-gray-700">Courses</a>
+                <a href="#testimonials" class="block text-gray-700">Reviews</a>
+                <a href="#" class="block bg-secondary text-white text-center py-2 rounded mt-2">Start Free Trial</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-20 bg-light rounded-2xl shadow-xl mb-20 border-b-8 border-primary" data-animate>
+            <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Unlock Your Potential.<br class="hidden sm:inline"> Explore the <span class="text-primary">EduVerse</span>.
+            </h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+                Access thousands of courses, expert-led instruction, and personalized learning paths—all in one seamless platform.
+            </p>
+            <div class="space-x-4">
+                <a href="#courses" class="inline-block bg-primary text-white font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                    Enroll Today
+                </a>
+                <a href="#courses" class="inline-block border border-primary text-primary font-semibold py-3 px-10 rounded-full hover:bg-primary hover:text-white transition duration-300 transform hover:scale-105">
+                    Browse Courses
+                </a>
+            </div>
+        </section>
+
+        <!-- Feature Highlights Section -->
+        <section id="features" class="py-12 mb-20" data-animate>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                Why Choose EduVerse?
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature cards... (kept as provided) -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary text-center transform hover:shadow-2xl transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-secondary mx-auto mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M7 6a7 7 0 0114 0v1a7 7 0 01-14 0V6zM6 9a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1z" clip-rule="evenodd" fill-rule="evenodd" />
+                        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 10a1 1 0 000 2h10a1 1 0 100-2H5z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Expert-Led Classes</h3>
+                    <p class="text-gray-600">Learn from industry veterans and top academic minds who bring real-world experience to your screen.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary text-center transform hover:shadow-2xl transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-secondary mx-auto mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Learn On Your Time</h3>
+                    <p class="text-gray-600">Access materials 24/7. Study at your own pace, on any device, anywhere in the world.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary text-center transform hover:shadow-2xl transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-secondary mx-auto mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 2a1 1 0 011-1h8a1 1 0 011 1v1a1 1 0 01-1 1H6a1 1 0 01-1-1V2zm6 10a1 1 0 100 2h2a1 1 0 100-2h-2z" clip-rule="evenodd" />
+                        <path d="M10 5a2 2 0 00-2 2v3a2 2 0 104 0V7a2 2 0 00-2-2z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Certificates & Credentials</h3>
+                    <p class="text-gray-600">Receive verifiable certificates upon completion to boost your resume and career prospects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Catalog Preview Section -->
+        <section id="courses" class="py-12 mb-20 bg-white rounded-2xl shadow-xl p-8" data-animate>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Popular Course Categories</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="border border-gray-200 p-6 rounded-lg text-center bg-gray-50 hover:bg-light transition duration-300 cursor-pointer group">
+                    <div class="text-3xl text-primary mb-2">💻</div>
+                    <h3 class="font-bold text-gray-900 group-hover:text-primary">Software Development</h3>
+                    <p class="text-sm text-gray-500">240+ Courses</p>
+                </div>
+                <div class="border border-gray-200 p-6 rounded-lg text-center bg-gray-50 hover:bg-light transition duration-300 cursor-pointer group">
+                    <div class="text-3xl text-primary mb-2">📈</div>
+                    <h3 class="font-bold text-gray-900 group-hover:text-primary">Data Science & AI</h3>
+                    <p class="text-sm text-gray-500">150+ Courses</p>
+                </div>
+                <div class="border border-gray-200 p-6 rounded-lg text-center bg-gray-50 hover:bg-light transition duration-300 cursor-pointer group">
+                    <div class="text-3xl text-primary mb-2">🎨</div>
+                    <h3 class="font-bold text-gray-900 group-hover:text-primary">Design & Creativity</h3>
+                    <p class="text-sm text-gray-500">110+ Courses</p>
+                </div>
+                <div class="border border-gray-200 p-6 rounded-lg text-center bg-gray-50 hover:bg-light transition duration-300 cursor-pointer group">
+                    <div class="text-3xl text-primary mb-2">💼</div>
+                    <h3 class="font-bold text-gray-900 group-hover:text-primary">Business & Finance</h3>
+                    <p class="text-sm text-gray-500">300+ Courses</p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">See Full Catalog (4,000+ Courses)</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-12 mb-20" data-animate>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Our Learners Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-secondary">
+                    <blockquote class="italic text-gray-600 mb-4">"EduVerse transformed my career path. The Data Science course was incredibly detailed and the support was excellent. Highly recommend!"</blockquote>
+                    <p class="font-semibold text-gray-800">- Sarah L., Data Analyst</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-secondary">
+                    <blockquote class="italic text-gray-600 mb-4">"The flexible schedule allowed me to upskill while working full-time. The quality of the instructors is unmatched."</blockquote>
+                    <p class="font-semibold text-gray-800">- Ben K., Front-End Developer</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-secondary">
+                    <blockquote class="italic text-gray-600 mb-4">"I finally grasped complex concepts thanks to the interactive labs. EduVerse makes learning engaging and practical."</blockquote>
+                    <p class="font-semibold text-gray-800">- Maria C., University Student</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <section class="bg-primary p-12 rounded-2xl text-center text-white shadow-xl" data-animate>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Your Learning Journey?</h2>
+            <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">Join thousands of students worldwide building the skills they need for tomorrow.</p>
+            <a href="#" class="inline-block bg-secondary text-white font-extrabold text-lg py-4 px-12 rounded-full shadow-2xl hover:bg-emerald-600 transition duration-300 transform hover:scale-110">Get Started Now (It's Free for 7 Days!)</a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex justify-between items-start border-b border-gray-700 pb-6 mb-6">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold text-primary">EduVerse</h3>
+                    <p class="text-sm text-gray-400 mt-2">Your Universe of Learning.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 text-white">Platform</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-primary">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary">Career</a></li>
+                        <li><a href="#" class="hover:text-primary">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 text-white">Community</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-primary">Become an Instructor</a></li>
+                        <li><a href="#" class="hover:text-primary">Student Forum</a></li>
+                        <li><a href="#" class="hover:text-primary">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 text-white">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-sm text-gray-500">&copy; 2025 EduVerse, Inc. All rights reserved. | <a href="#" class="hover:text-primary">Privacy Policy</a></div>
+        </div>
+    </footer>
+
+    <!-- Site scripts -->
+    <script src="site.js"></script>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
