@@ -72,10 +72,16 @@
    Merged so there is only a single site JS file to include in the page.
 ------------------------------------------------------------------ */
 document.addEventListener('DOMContentLoaded', () => {
+  // Defensive checks: only initialize slide navigation when slides and controls exist.
   const slides = Array.from(document.querySelectorAll('.slide'));
+  if (slides.length === 0) return; // no slides on this page
+
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
   const navDotsContainer = document.getElementById('nav-dots');
+  // If any of the required controls are missing, skip slide logic to avoid runtime errors.
+  if (!prevBtn || !nextBtn || !navDotsContainer) return;
+
   let currentSlide = 1;
   const totalSlides = slides.length;
 
