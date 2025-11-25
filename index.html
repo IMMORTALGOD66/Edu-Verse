@@ -36,9 +36,56 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo/Brand Name -->
             <a href="#" class="text-3xl font-extrabold text-primary flex items-center group">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2 group-hover:rotate-12 transition duration-500" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-5-8a1 1 0 011-1h6a1 1 0 110 2H6a1 1 0 01-1-1zm5 4a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                    <path fill-rule="evenodd" d="M3 10a7 7 0 1114 0 7 7 0 01-14 0zm8 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mr-2 group-hover:scale-110 transition duration-500" viewBox="0 0 900 900" fill="none">
+                    <!-- Background circle -->
+                    <circle cx="450" cy="450" r="400" fill="#0f1829" opacity="0.8"/>
+                    
+                    <!-- Open book base -->
+                    <path d="M 225 550 Q 225 600 250 620 L 450 650 L 650 620 Q 675 600 675 550 Z" fill="#00d9ff" opacity="0.7"/>
+                    <path d="M 250 550 L 225 520 Q 225 480 250 460 L 450 420 L 650 460 Q 675 480 675 520 L 650 550 Z" fill="#00b8cc"/>
+                    <path d="M 250 520 L 450 420 L 650 520" stroke="#00d9ff" stroke-width="8" fill="none" opacity="0.5"/>
+                    
+                    <!-- Book pages (layered) -->
+                    <path d="M 300 500 L 280 450 Q 280 430 300 420 L 450 380 L 600 420 Q 620 430 620 450 L 600 500 Z" fill="#7c3aed" opacity="0.8"/>
+                    <path d="M 320 480 L 305 440 Q 305 425 320 418 L 450 385 L 580 418 Q 595 425 595 440 L 580 480 Z" fill="#a855f7" opacity="0.9"/>
+                    <path d="M 340 460 L 330 430 Q 330 420 340 416 L 450 390 L 560 416 Q 570 420 570 430 L 560 460 Z" fill="#ec4899" opacity="0.85"/>
+                    <path d="M 360 440 L 355 420 Q 355 415 360 413 L 450 395 L 540 413 Q 545 415 545 420 L 540 440 Z" fill="#f97316" opacity="0.8"/>
+                    <path d="M 380 420 L 378 410 Q 378 407 380 406 L 450 390 L 520 406 Q 522 407 522 410 L 520 420 Z" fill="#fbbf24" opacity="0.8"/>
+                    
+                    <!-- Brain in center -->
+                    <g transform="translate(450, 320)">
+                        <!-- Brain outline -->
+                        <ellipse cx="0" cy="0" rx="45" ry="50" fill="#00d9ff" opacity="0.95"/>
+                        <!-- Brain convolutions -->
+                        <path d="M -30 -20 Q -20 -30 -10 -20 Q 0 -30 10 -20 Q 20 -30 30 -20" stroke="#0f1829" stroke-width="3" fill="none" opacity="0.7"/>
+                        <path d="M -28 -5 Q -18 -15 -8 -5 Q 2 -15 12 -5 Q 22 -15 28 -5" stroke="#0f1829" stroke-width="2.5" fill="none" opacity="0.7"/>
+                        <path d="M -30 10 Q -20 5 -10 10 Q 0 5 10 10 Q 20 5 30 10" stroke="#0f1829" stroke-width="2.5" fill="none" opacity="0.7"/>
+                    </g>
+                    
+                    <!-- Decorative hexagons and dots -->
+                    <g opacity="0.8">
+                        <!-- Hexagons -->
+                        <circle cx="360" cy="220" r="18" fill="none" stroke="#00d9ff" stroke-width="2"/>
+                        <circle cx="540" cy="220" r="18" fill="none" stroke="#00d9ff" stroke-width="2"/>
+                        <circle cx="420" cy="180" r="22" fill="none" stroke="#00d9ff" stroke-width="2"/>
+                        
+                        <!-- Connecting dots -->
+                        <circle cx="330" cy="250" r="5" fill="#ff6b6b"/>
+                        <circle cx="400" cy="200" r="6" fill="#00d9ff"/>
+                        <circle cx="500" cy="200" r="6" fill="#00d9ff"/>
+                        <circle cx="570" cy="250" r="5" fill="#a855f7"/>
+                        <circle cx="420" cy="280" r="5" fill="#fbbf24"/>
+                        <circle cx="450" cy="260" r="4" fill="#a855f7"/>
+                    </g>
+                    
+                    <!-- Connection lines -->
+                    <g stroke="#00d9ff" stroke-width="1.5" opacity="0.4">
+                        <line x1="360" y1="238" x2="420" y2="280"/>
+                        <line x1="540" y1="238" x2="480" y2="280"/>
+                        <line x1="360" y1="220" x2="400" y2="200"/>
+                        <line x1="540" y1="220" x2="500" y2="200"/>
+                        <line x1="420" y1="202" x2="450" y2="264"/>
+                    </g>
                 </svg>
                 EduVerse
             </a>
@@ -159,30 +206,12 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-12 mb-20" data-animate>
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Our Learners Say</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-secondary">
-                    <blockquote class="italic text-gray-600 mb-4">"EduVerse transformed my career path. The Data Science course was incredibly detailed and the support was excellent. Highly recommend!"</blockquote>
-                    <p class="font-semibold text-gray-800">- Sarah L., Data Analyst</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-secondary">
-                    <blockquote class="italic text-gray-600 mb-4">"The flexible schedule allowed me to upskill while working full-time. The quality of the instructors is unmatched."</blockquote>
-                    <p class="font-semibold text-gray-800">- Ben K., Front-End Developer</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-secondary">
-                    <blockquote class="italic text-gray-600 mb-4">"I finally grasped complex concepts thanks to the interactive labs. EduVerse makes learning engaging and practical."</blockquote>
-                    <p class="font-semibold text-gray-800">- Maria C., University Student</p>
-                </div>
-            </div>
-        </section>
 
         <!-- Call to Action Banner -->
         <section class="bg-primary p-12 rounded-2xl text-center text-white shadow-xl" data-animate>
             <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Your Learning Journey?</h2>
             <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">Join thousands of students worldwide building the skills they need for tomorrow.</p>
-            <a href="#" class="inline-block bg-secondary text-white font-extrabold text-lg py-4 px-12 rounded-full shadow-2xl hover:bg-emerald-600 transition duration-300 transform hover:scale-110">Get Started Now (It's Free for 7 Days!)</a>
+            <a href="#" class="inline-block bg-secondary text-white font-extrabold text-lg py-4 px-12 rounded-full shadow-2xl hover:bg-emerald-600 transition duration-300 transform hover:scale-110">Get Started Now</a>
         </section>
 
     </main>
