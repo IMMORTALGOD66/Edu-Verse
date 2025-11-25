@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Growth Profile | EduVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        window.tailwind = window.tailwind || {};
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary': '#4f46e5',
+                'secondary': '#10b981',
+                'light': '#e0e7ff',
+                'dark-navy': '#0f1829', 
+              }
+            }
+          }
+        }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="site.css">
+</head>
+<body class="min-h-screen antialiased text-gray-800 font-sans">
+
+    <header class="shadow-lg bg-white sticky top-0 z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-extrabold text-primary flex items-center group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mr-2 group-hover:scale-110 transition duration-500" viewBox="0 0 900 900" fill="none">...</svg>
+                EduVerse
+            </a>
+
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                <a href="profile.html" class="text-primary font-bold border-b-2 border-primary transition duration-300">Growth Profile</a>
+                <a href="features.html" class="text-gray-600 hover:text-primary font-medium transition duration-300">Core Features</a>
+                <a href="challenges.html" class="text-gray-600 hover:text-primary font-medium transition duration-300">Challenges</a>
+            </div>
+
+            <a href="profile.html" class="hidden sm:inline-block bg-secondary text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-emerald-600 transition duration-300 transform hover:scale-105">
+                Start Your Journey
+            </a>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-2">
+                <a href="profile.html" class="block text-primary font-bold">Growth Profile</a>
+                <a href="features.html" class="block text-gray-700">Core Features</a>
+                <a href="challenges.html" class="block text-gray-700">Challenges</a>
+                <a href="profile.html" class="block bg-secondary text-white text-center py-2 rounded mt-2">Start Your Journey</a>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <section class="text-center py-16 bg-dark-navy text-white rounded-xl shadow-xl mb-12">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">Your Digital Growth Profile</h1>
+            <p class="text-xl opacity-80 max-w-3xl mx-auto">
+                The comprehensive, dynamic "whole person" report card that moves **past the pressure of traditional grades**.
+            </p>
+        </section>
+
+        <section class="py-12">
+            <h2 class="text-3xl font-bold text-center text-primary mb-10">The Three Pillars of Holistic Learning</h2>
+            <p class="text-center text-lg text-gray-600 mb-12 max-w-4xl mx-auto">
+                EduVerse tracks your development across three critical, measurable dimensions to foster genuine personal development and real-world skill mastery.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-indigo-500">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-4xl text-indigo-500">🧠</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Academics</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Focuses on concept mastery, active learning participation, and project contributions.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
+                        <li>Concept Mastery (vs. Rote Memorization)</li>
+                        <li>Active Learning Participation</li>
+                        <li>Project Contributions</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-secondary">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-4xl text-secondary">🤝</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Character</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Measures and tracks soft skills like empathy, leadership, and positive community interactions.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
+                        <li>Teamwork</li>
+                        <li>Leadership</li>
+                        <li>Empathy</li>
+                        <li>Positive Community Interactions</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-pink-500">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="text-4xl text-pink-500">💡</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Skills & Creativity</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Showcases competency in critical areas like creativity, tech fluency, and expression.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
+                        <li>Creativity</li>
+                        <li>Tech Fluency</li>
+                        <li>Digital Media Use</li>
+                        <li>Effective Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 mt-10 bg-gray-50 rounded-xl p-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Visualizing Progress</h2>
+            <p class="text-center text-lg text-gray-600 mb-10">
+                Progress is shown with intuitive badges and visual cues.
+            </p>
+
+            <div class="flex justify-center items-center space-x-8 sm:space-x-16">
+                
+                <div class="text-center">
+                    <span class="text-5xl">🌱</span>
+                    <p class="font-semibold text-lg mt-2 text-gray-700">Beginner</p>
+                </div>
+                
+                <div class="text-5xl text-gray-400">→</div>
+
+                <div class="text-center">
+                    <span class="text-5xl">🌿</span>
+                    <p class="font-semibold text-lg mt-2 text-gray-700">Growing</p>
+                </div>
+                
+                <div class="text-5xl text-gray-400">→</div>
+
+                <div class="text-center">
+                    <span class="text-5xl">🌳</span>
+                    <p class="font-semibold text-lg mt-2 text-gray-700">Proficient</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-20">
+        </footer>
+    
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+2. Core Features (features.html)
+This page details the AI Learning Buddy and the Peer Feedback Wall.
+
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Features | EduVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        window.tailwind = window.tailwind || {};
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary': '#4f46e5',
+                'secondary': '#10b981',
+                'light': '#e0e7ff',
+                'dark-navy': '#0f1829', 
+              }
+            }
+          }
+        }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="site.css">
+</head>
+<body class="min-h-screen antialiased text-gray-800 font-sans">
+
+    <header class="shadow-lg bg-white sticky top-0 z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-extrabold text-primary flex items-center group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mr-2 group-hover:scale-110 transition duration-500" viewBox="0 0 900 900" fill="none">...</svg>
+                EduVerse
+            </a>
+
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                <a href="profile.html" class="text-gray-600 hover:text-primary font-medium transition duration-300">Growth Profile</a>
+                <a href="features.html" class="text-primary font-bold border-b-2 border-primary transition duration-300">Core Features</a>
+                <a href="challenges.html" class="text-gray-600 hover:text-primary font-medium transition duration-300">Challenges</a>
+            </div>
+
+            <a href="profile.html" class="hidden sm:inline-block bg-secondary text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-emerald-600 transition duration-300 transform hover:scale-105">
+                Start Your Journey
+            </a>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-2">
+                <a href="profile.html" class="block text-gray-700">Growth Profile</a>
+                <a href="features.html" class="block text-primary font-bold">Core Features</a>
+                <a href="challenges.html" class="block text-gray-700">Challenges</a>
+                <a href="profile.html" class="block bg-secondary text-white text-center py-2 rounded mt-2">Start Your Journey</a>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <section class="text-center py-16 bg-primary text-white rounded-xl shadow-xl mb-12">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">Core Features</h1>
+            <p class="text-xl opacity-80 max-w-3xl mx-auto">
+                A look at the tools for accelerated growth and community.
+            </p>
+        </section>
+
+        <section class="py-12">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <div class="bg-white p-10 rounded-xl shadow-2xl border-l-8 border-secondary">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-5xl text-secondary">🤖</span>
+                        <h2 class="text-3xl font-bold text-gray-900">AI Learning Buddy</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        This dedicated AI assistant serves as a personal reflection guide to facilitate self-directed learning.
+                    </p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-3 text-xl font-bold">»</span>
+                            <div>
+                                <strong class="font-semibold">Weekly Reflection Prompts:</strong> Delivers prompts designed to encourage introspection (e.g., "What was your proudest moment this week?").
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-3 text-xl font-bold">»</span>
+                            <div>
+                                <strong class="font-semibold">Smart Suggestions:</strong> Uses growth data to **recommend personalized resources** like articles, videos, and skill challenges.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-xl shadow-2xl border-l-8 border-primary">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-5xl text-primary">👍</span>
+                        <h2 class="text-3xl font-bold text-gray-900">Peer Feedback Wall</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        A dynamic, positive-only digital space where classmates celebrate one another's soft skills.
+                    </p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-secondary mr-3 text-xl font-bold">»</span>
+                            <div>
+                                <strong class="font-semibold">Community Appreciation:</strong> Students can **appreciate others** for demonstrated teamwork, kindness, or creative ideas.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-secondary mr-3 text-xl font-bold">»</span>
+                            <div>
+                                <strong class="font-semibold">Measurable Development:</strong> Every "appreciation" automatically contributes to the recipient's **Character section** in their Growth Profile.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-light p-10 rounded-xl mt-12 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Ready to put your skills to the test?</h3>
+            <p class="text-gray-600 mb-6">Explore the Tech-for-Values Challenges that drive Character and Skills growth.</p>
+            <a href="challenges.html" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300">View Challenges</a>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-20">
+        </footer>
+    
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
