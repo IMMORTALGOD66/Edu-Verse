@@ -1,243 +1,288 @@
-<!DOCTYPE html>
+I understand completely. I am truly sorry for the confusion and difficulty in obtaining the file. You do not need to deal with the file blocks if your platform is making it hard to download.
 
+Here is the entire HTML code pasted directly as plain text, including all the CSS and JavaScript, which you can now easily select and copy-paste:
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EduVerse | Your Universe of Learning</title>
-<!-- Inter Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- MANDATORY CSS LINK: This links to the site.css file containing all styles -->
-
-<link rel="stylesheet" href="site.css">
-
-</head>
-<body>
-
-<!-- Header & Navigation Bar -->
-
-<header class="header">
-<nav class="nav-bar">
-<!-- Logo and Site Name -->
-<a href="index.html" class="nav-logo group">
-<!-- SVG Icon for EduVerse -->
-<svg xmlns="http://www.w3.org/2000/svg" class="nav-logo-svg" viewBox="0 0 900 900" fill="none">
-<circle cx="450" cy="450" r="400" fill="#0f1829" opacity="0.8"/>
-
-            <path d="M 225 550 Q 225 600 250 620 L 450 650 L 650 620 Q 675 600 675 550 Z" fill="#00d9ff" opacity="0.7"/>
-            <path d="M 250 550 L 225 520 Q 225 480 250 460 L 450 420 L 650 460 Q 675 480 675 520 L 650 550 Z" fill="#00b8cc"/>
-            <path d="M 250 520 L 450 420 L 650 520" stroke="#00d9ff" stroke-width="8" fill="none" opacity="0.5"/>
-            
-            <path d="M 300 500 L 280 450 Q 280 430 300 420 L 450 380 L 600 420 Q 620 430 620 450 L 600 500 Z" fill="#7c3aed" opacity="0.8"/>
-            <path d="M 320 480 L 305 440 Q 305 425 320 418 L 450 385 L 580 418 Q 595 425 595 440 L 580 480 Z" fill="#a855f7" opacity="0.9"/>
-            <path d="M 340 460 L 330 430 Q 330 420 340 416 L 450 390 L 560 416 Q 570 420 570 430 L 560 460 Z" fill="#ec4899" opacity="0.85"/>
-            <path d="M 360 440 L 355 420 Q 355 415 360 413 L 450 395 L 540 413 Q 545 415 545 420 L 540 440 Z" fill="#f97316" opacity="0.8"/>
-            <path d="M 380 420 L 378 410 Q 378 407 380 406 L 450 390 L 520 406 Q 522 407 522 410 L 520 420 Z" fill="#fbbf24" opacity="0.8"/>
-            
-            <g transform="translate(450, 320)">
-                <ellipse cx="0" cy="0" rx="45" ry="50" fill="#00d9ff" opacity="0.95"/>
-                <path d="M -30 -20 Q -20 -30 -10 -20 Q 0 -30 10 -20 Q 20 -30 30 -20" stroke="#0f1829" stroke-width="3" fill="none" opacity="0.7"/>
-                <path d="M -28 -5 Q -18 -15 -8 -5 Q 2 -15 12 -5 Q 22 -15 28 -5" stroke="#0f1829" stroke-width="2.5" fill="none" opacity="0.7"/>
-                <path d="M -30 10 Q -20 5 -10 10 Q 0 5 10 10 Q 20 5 30 10" stroke="#0f1829" stroke-width="2.5" fill="none" opacity="0.7"/>
-            </g>
-            
-            <g opacity="0.8">
-                <circle cx="360" cy="220" r="18" fill="none" stroke="#00d9ff" stroke-width="2"/>
-                <circle cx="540" cy="220" r="18" fill="none" stroke="#00d9ff" stroke-width="2"/>
-                <circle cx="420" cy="180" r="22" fill="none" stroke="#00d9ff" stroke-width="2"/>
-                
-                <circle cx="330" cy="250" r="5" fill="#ff6b6b"/>
-                <circle cx="400" cy="200" r="6" fill="#00d9ff"/>
-                <circle cx="500" cy="200" r="6" fill="#00d9ff"/>
-                <circle cx="570" cy="250" r="5" fill="#a855f7"/>
-                <circle cx="420" cy="280" r="5" fill="#fbbf24"/>
-                <circle cx="450" cy="260" r="4" fill="#a855f7"/>
-            </g>
-            
-            <g stroke="#00d9ff" stroke-width="1.5" opacity="0.4">
-                <line x1="360" y1="238" x2="420" y2="280"/>
-                <line x1="540" y1="238" x2="480" y2="280"/>
-                <line x1="360" y1="220" x2="400" y2="200"/>
-                <line x1="540" y1="220" x2="500" y2="200"/>
-                <line x1="420" y1="202" x2="450" y2="264"/>
-            </g>
-        </svg>
-        EduVerse
-    </a>
-
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-button" class="mobile-menu-button is-hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <svg class="mobile-menu-button-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-    </button>
-
-    <!-- Desktop Links -->
-    <div id="nav-links" class="nav-links">
-        <a href="profile.html" class="nav-link">Growth Profile</a>
-        <a href="features.html" class="nav-link">Core Features</a>
-        <a href="challenges.html" class="nav-link">Challenges</a>
-    </div>
-
-    <!-- CTA Button -->
-    <a href="profile.html" class="btn btn-nav-cta">
-        Start Your Journey
-    </a>
-</nav>
-
-<!-- Mobile Menu Dropdown -->
-<div id="mobile-menu" class="mobile-nav">
-    <div class="mobile-nav-inner">
-        <a href="profile.html">Growth Profile</a>
-        <a href="features.html">Core Features</a>
-        <a href="challenges.html">Challenges</a>
-        <!-- Mobile CTA Button -->
-        <a href="profile.html" class="btn-nav-cta">Start Your Journey</a>
-    </div>
-</div>
-
-
-</header>
-
-<main class="main-content">
-
-<!-- Hero Section -->
-<section id="hero" class="hero-section">
-    <h1 class="hero-title">
-        Beyond Marks: <span class="hero-title-highlight">Holistic Learning</span> Reimagined.
-    </h1>
-    <p class="hero-subtitle">
-        EduVerse builds a dynamic platform that empowers every student to grow across three dimensions: **Skills, Character, and Creativity.** We measure *real-world skill mastery*, not just grades.
-    </p>
-    <div class="hero-btn-group">
-        <a href="profile.html" class="btn btn-primary">
-            Explore Your Growth Profile
-        </a>
-        <a href="features.html" class="btn btn-secondary">
-            See All Features
-        </a>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section id="features" class="features-section">
-    <h2 class="section-heading">
-        Our Focus: Three Dimensions of Success
-    </h2>
-    <div class="feature-grid">
-        
-        <!-- Card 1: Skills Mastery -->
-        <div class="feature-card">
-            <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-            </svg>
-            <h3 class="feature-title">Skills Mastery</h3>
-            <p class="feature-description">Creativity, tech fluency, and problem-solving over rote memorization.</p>
-        </div>
-
-        <!-- Card 2: Character Development -->
-        <div class="feature-card feature-card-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM12 11h-1a1 1 0 00-1 1v3h4v-3a1 1 0 00-1-1zm-4 4v-3h-.5a2.5 2.5 0 00-2.5 2.5v.5h3zM16 12.5a2.5 2.5 0 00-2.5-2.5H13v3h3z" />
-            </svg>
-            <h3 class="feature-title">Character Development</h3>
-            <p class="feature-description">Measurable growth in teamwork, leadership, empathy, and positive community interaction.</p>
-        </div>
-
-        <!-- Card 3: Innovation & Expression -->
-        <div class="feature-card">
-            <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1h2a1 1 0 011 1v1h1a1 1 0 011 1v6a1 1 0 01-1 1h-1v1a1 1 0 01-1 1h-2v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-1H4a1 1 0 01-1-1v-1H2a1 1 0 01-1-1V7a1 1 0 011-1h1V5a1 1 0 011-1h2V3a1 1 0 011-1h2zm0 14h2v-2h-2v2zm-2-2v2H6v-2h2zm4 0v2h2v-2h-2zm-2-4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-            </svg>
-            <h3 class="feature-title">Innovation & Expression</h3>
-            <p class="feature-description">Fostering innovative ideas, digital media use, and effective communication through project-based work.</p>
-        </div>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse | Your Universe of Learning</title>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <div class="features-cta-container">
-        <a href="challenges.html" class="features-cta-link">See Tech-for-Values Challenges</a>
-    </div>
-</section>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- CTA Banner -->
-<section class="cta-banner">
-    <h2 class="cta-banner-title">Ready to Start Your Personalized Growth Journey?</h2>
-    <p class="cta-banner-subtitle">See how EduVerse tracks your unique progress in skills, character, and creativity, setting you up for future success.</p>
-    <a href="profile.html" class="btn-banner-cta">Get Started Now</a>
-</section>
+    <!-- Tailwind Configuration and Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'space-dark': '#0f1829',
+                        'space-light': '#1d2a40',
+                        'edu-primary': '#00d9ff', // Cyan
+                        'edu-secondary': '#a855f7', // Violet
+                        'edu-accent': '#fbbf24', // Amber
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base styles for dark theme and font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f1829; /* space-dark */
+            color: #e5e7eb; /* gray-200 */
+        }
+        /* Custom CSS for Mobile Menu Transition */
+        .mobile-nav {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, opacity 0.3s;
+        }
 
-
-</main>
-
-<!-- Footer -->
-
-<footer class="footer">
-<div class="footer-container">
-<div class="footer-links-group">
-<div class="footer-column">
-<h3 class="footer-title">EduVerse</h3>
-<p class="footer-subtitle">A Smart System for Holistic Learning.</p>
-</div>
-<div class="footer-column">
-<h4 class="footer-heading">The Platform</h4>
-<ul class="footer-list">
-<li><a href="profile.html">Growth Profile</a></li>
-<li><a href="features.html">Core Features</a></li>
-<li><a href="challenges.html">Challenges</a></li>
-</ul>
-</div>
-<div class="footer-column">
-<h4 class="footer-heading">Community</h4>
-<ul class="footer-list">
-<li><a href="#">Instructor/Educator View</a></li>
-<li><a href="#">Student Forum</a></li>
-<li><a href="#">Blog</a></li>
-</ul>
-</div>
-<div class="footer-column">
-<h4 class="footer-heading">Connect</h4>
-<div class="footer-social-links">
-<a href="#">Twitter</a>
-<a href="#">Facebook</a>
-<a href="#">LinkedIn</a>
-</div>
-</div>
-</div>
-<div class="footer-copyright">
-&copy; 2025 EduVerse, Inc. All rights reserved. | <a href="#">Privacy Policy</a>
-</div>
-</div>
-</footer>
-
-<!-- JavaScript for Mobile Menu -->
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-const menuButton = document.getElementById('mobile-menu-button');
-const menu = document.getElementById('mobile-menu');
-
-    // The CSS controls the display via the .is-open class
-    // We use the hidden class from the old Tailwind setup as a fallback, but update for clarity
-    menuButton.addEventListener(&#39;click&#39;, function() {
-        const isExpanded = menuButton.getAttribute(&#39;aria-expanded&#39;) === &#39;true&#39; || false;
+        .mobile-nav.is-open {
+            max-height: 500px;
+            opacity: 1;
+        }
         
-        // Toggle the aria-expanded attribute
-        menuButton.setAttribute(&#39;aria-expanded&#39;, !isExpanded);
+        .nav-logo-svg {
+            height: 2.5rem;
+            width: 2.5rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Ensure mobile button is only visible on mobile */
+        @media (min-width: 768px) {
+            .mobile-menu-button {
+                display: none;
+            }
+        }
+        @media (max-width: 767px) {
+            .nav-links, .btn-nav-cta-desktop {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header & Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-space-dark/95 backdrop-blur-sm shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo and Site Name -->
+            <a href="index.html" class="flex items-center text-xl font-extrabold text-white transition duration-300 transform group hover:text-edu-primary">
+                <!-- SVG Icon for EduVerse -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="nav-logo-svg text-edu-primary" viewBox="0 0 900 900" fill="none">
+                    <circle cx="450" cy="450" r="400" fill="#0f1829" opacity="0.8"/>
         
-        // Toggle the visibility based on CSS class
-        menu.classList.toggle(&#39;mobile-nav&#39;);
-        menu.classList.toggle(&#39;is-open&#39;); 
-    });
+                    <path d="M 225 550 Q 225 600 250 620 L 450 650 L 650 620 Q 675 600 675 550 Z" fill="#00d9ff" opacity="0.7"/>
+                    <path d="M 250 550 L 225 520 Q 225 480 250 460 L 450 420 L 650 460 Q 675 480 675 520 L 650 550 Z" fill="#00b8cc"/>
+                    <path d="M 250 520 L 450 420 L 650 520" stroke="#00d9ff" stroke-width="8" fill="none" opacity="0.5"/>
+                    
+                    <path d="M 300 500 L 280 450 Q 280 430 300 420 L 450 380 L 600 420 Q 620 430 620 450 L 600 500 Z" fill="#7c3aed" opacity="0.8"/>
+                    <path d="M 320 480 L 305 440 Q 305 425 320 418 L 450 385 L 580 418 Q 595 425 595 440 L 580 480 Z" fill="#a855f7" opacity="0.9"/>
+                    <path d="M 340 460 L 330 430 Q 330 420 340 416 L 450 390 L 560 416 Q 570 420 570 430 L 560 460 Z" fill="#ec4899" opacity="0.85"/>
+                    <path d="M 360 440 L 355 420 Q 355 415 360 413 L 450 395 L 540 413 Q 545 415 545 420 L 540 440 Z" fill="#f97316" opacity="0.8"/>
+                    <path d="M 380 420 L 378 410 Q 378 407 380 406 L 450 390 L 520 406 Q 522 407 522 410 L 520 420 Z" fill="#fbbf24" opacity="0.8"/>
+                    
+                    <g transform="translate(450, 320)">
+                        <ellipse cx="0" cy="0" rx="45" ry="50" fill="#00d9ff" opacity="0.95"/>
+                        <path d="M -30 -20 Q -20 -30 -10 -20 Q 0 -30 10 -20 Q 20 -30 30 -20" stroke="#0f1829" stroke-width="3" fill="none" opacity="0.7"/>
+                        <path d="M -28 -5 Q -18 -15 -8 -5 Q 2 -15 12 -5 Q 22 -15 28 -5" stroke="#0f1829" stroke-width="2.5" fill="none" opacity="0.7"/>
+                        <path d="M -30 10 Q -20 5 -10 10 Q 0 5 10 10 Q 20 5 30 10" stroke="#0f1829" stroke-width="2.5" fill="none" opacity="0.7"/>
+                    </g>
+                    
+                    <g opacity="0.8">
+                        <circle cx="360" cy="220" r="18" fill="none" stroke="#00d9ff" stroke-width="2"/>
+                        <circle cx="540" cy="220" r="18" fill="none" stroke="#00d9ff" stroke-width="2"/>
+                        <circle cx="420" cy="180" r="22" fill="none" stroke="#00d9ff" stroke-width="2"/>
+                        
+                        <circle cx="330" cy="250" r="5" fill="#ff6b6b"/>
+                        <circle cx="400" cy="200" r="6" fill="#00d9ff"/>
+                        <circle cx="500" cy="200" r="6" fill="#00d9ff"/>
+                        <circle cx="570" cy="250" r="5" fill="#a855f7"/>
+                        <circle cx="420" cy="280" r="5" fill="#fbbf24"/>
+                        <circle cx="450" cy="260" r="4" fill="#a855f7"/>
+                    </g>
+                    
+                    <g stroke="#00d9ff" stroke-width="1.5" opacity="0.4">
+                        <line x1="360" y1="238" x2="420" y2="280"/>
+                        <line x1="540" y1="238" x2="480" y2="280"/>
+                        <line x1="360" y1="220" x2="400" y2="200"/>
+                        <line x1="540" y1="220" x2="500" y2="200"/>
+                        <line x1="420" y1="202" x2="450" y2="264"/>
+                    </g>
+                </svg>
+                EduVerse
+            </a>
 
-    // Ensure the mobile menu button is visible on mobile (it was hidden by MD:hidden class in old HTML)
-    if (window.innerWidth &lt; 768) {
-        menuButton.classList.remove(&#39;is-hidden&#39;);
-    }
-});
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="mobile-menu-button md:hidden p-2 rounded-full text-edu-primary hover:bg-space-light transition duration-150" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
 
+            <!-- Desktop Links (Growth Profile removed) -->
+            <div id="nav-links" class="hidden md:flex space-x-8 items-center">
+                <a href="features.html" class="text-gray-300 hover:text-edu-primary transition duration-200 font-medium">Core Features</a>
+                <a href="challenges.html" class="text-gray-300 hover:text-edu-primary transition duration-200 font-medium">Challenges</a>
+            </div>
 
-</script>
+            <!-- CTA Button (Desktop) - Rerouted -->
+            <a href="profile.html" class="btn-nav-cta-desktop hidden md:block px-6 py-2 bg-edu-secondary text-white font-semibold rounded-full shadow-lg transition duration-300 hover:bg-opacity-90 hover:shadow-xl transform hover:scale-105">
+                Start Your Journey
+            </a>
+        </nav>
 
+        <!-- Mobile Menu Dropdown (Growth Profile removed) -->
+        <div id="mobile-menu" class="mobile-nav md:hidden bg-space-light/95 border-t border-edu-primary/30">
+            <div class="p-4 space-y-3 flex flex-col items-start">
+                <a href="features.html" class="text-gray-200 hover:text-edu-primary transition duration-150 w-full p-2 rounded-lg">Core Features</a>
+                <a href="challenges.html" class="text-gray-200 hover:text-edu-primary transition duration-150 w-full p-2 rounded-lg">Challenges</a>
+                <!-- Mobile CTA Button - Rerouted -->
+                <a href="profile.html" class="w-full text-center mt-3 px-4 py-3 bg-edu-primary text-space-dark font-bold rounded-xl shadow-lg hover:bg-opacity-90 transition duration-300">Start Your Journey</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section id="hero" class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+                Beyond Marks: <span class="text-edu-primary block sm:inline">Holistic Learning</span> Reimagined.
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-400 mb-10">
+                EduVerse builds a dynamic platform that empowers every student to grow across three dimensions: **Skills, Character, and Creativity.** We measure *real-world skill mastery*, not just grades.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <!-- Main CTA - Rerouted -->
+                <a href="profile.html" class="px-8 py-3 bg-edu-primary text-space-dark font-bold rounded-xl shadow-2xl shadow-edu-primary/30 transition duration-300 transform hover:scale-105 hover:shadow-edu-primary/50">
+                    Start Your Journey
+                </a>
+                <a href="features.html" class="px-8 py-3 bg-space-light border border-gray-600 text-gray-200 font-semibold rounded-xl transition duration-300 transform hover:bg-space-light/80 hover:scale-105">
+                    See All Features
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
+                Our Focus: Three Dimensions of Success
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Skills Mastery -->
+                <div class="bg-space-light p-8 rounded-2xl shadow-xl border-t-4 border-edu-primary hover:shadow-2xl hover:border-edu-primary/80 transition duration-300 transform hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-edu-primary mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Skills Mastery</h3>
+                    <p class="text-gray-400">Creativity, tech fluency, and problem-solving over rote memorization. Focused on real-world application.</p>
+                </div>
+
+                <!-- Card 2: Character Development -->
+                <div class="bg-space-light p-8 rounded-2xl shadow-xl border-t-4 border-edu-secondary hover:shadow-2xl hover:border-edu-secondary/80 transition duration-300 transform hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-edu-secondary mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM12 11h-1a1 1 0 00-1 1v3h4v-3a1 1 0 00-1-1zm-4 4v-3h-.5a2.5 2.5 0 00-2.5 2.5v.5h3zM16 12.5a2.5 2.5 0 00-2.5-2.5H13v3h3z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Character Development</h3>
+                    <p class="text-gray-400">Measurable growth in teamwork, leadership, empathy, and positive community interaction.</p>
+                </div>
+
+                <!-- Card 3: Innovation & Expression -->
+                <div class="bg-space-light p-8 rounded-2xl shadow-xl border-t-4 border-edu-accent hover:shadow-2xl hover:border-edu-accent/80 transition duration-300 transform hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-edu-accent mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1h2a1 1 0 011 1v1h1a1 1 0 011 1v6a1 1 0 01-1 1h-1v1a1 1 0 01-1 1h-2v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-1H4a1 1 0 01-1-1v-1H2a1 1 0 01-1-1V7a1 1 0 011-1h1V5a1 1 0 011-1h2V3a1 1 0 011-1h2zm0 14h2v-2h-2v2zm-2-2v2H6v-2h2zm4 0v2h2v-2h-2zm-2-4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Innovation & Expression</h3>
+                    <p class="text-gray-400">Fostering innovative ideas, digital media use, and effective communication through project-based work.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="challenges.html" class="text-edu-primary font-medium border-b border-edu-primary/50 hover:border-edu-primary transition duration-300 pb-1">
+                    See Tech-for-Values Challenges &rarr;
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="bg-edu-secondary/10 py-16 mt-12 rounded-xl mx-4 sm:mx-6 lg:mx-8 shadow-inner border-y border-edu-secondary/50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Ready to Start Your Personalized Growth Journey?</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-8">See how EduVerse tracks your unique progress in skills, character, and creativity, setting you up for future success.</p>
+                <!-- CTA Button - Rerouted -->
+                <a href="profile.html" class="inline-block px-10 py-4 bg-edu-secondary text-white font-bold rounded-full shadow-2xl shadow-edu-secondary/40 transition duration-300 transform hover:scale-105 hover:bg-edu-secondary/90">
+                    Get Started Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-space-dark border-t border-space-light mt-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-space-light pb-8">
+                <div class="col-span-2 md:col-span-2">
+                    <h3 class="text-2xl font-extrabold text-edu-primary mb-2">EduVerse</h3>
+                    <p class="text-gray-400">A Smart System for Holistic Learning.</p>
+                </div>
+                <div class="col-span-1">
+                    <h4 class="text-lg font-semibold text-white mb-3">The Platform</h4>
+                    <ul class="space-y-2 text-sm">
+                        <!-- Removed Growth Profile link -->
+                        <li><a href="features.html" class="text-gray-400 hover:text-edu-primary transition">Core Features</a></li>
+                        <li><a href="challenges.html" class="text-gray-400 hover:text-edu-primary transition">Challenges</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-1">
+                    <h4 class="text-lg font-semibold text-white mb-3">Community</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-edu-primary transition">Instructor View</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-edu-primary transition">Student Forum</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-edu-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="text-lg font-semibold text-white mb-3">Connect</h4>
+                    <div class="flex space-x-4 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-edu-primary transition">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-edu-primary transition">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-edu-primary transition">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm text-gray-500">
+                &copy; 2025 EduVerse, Inc. All rights reserved. | <a href="#" class="hover:text-edu-primary transition">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', function() {
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+                
+                menuButton.setAttribute('aria-expanded', !isExpanded);
+                
+                // Toggles the custom class used for the slide/fade transition
+                menu.classList.toggle('is-open'); 
+            });
+        });
+    </script>
 </body>
 </html>
