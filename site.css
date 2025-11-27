@@ -6,8 +6,8 @@
 }
 
 /* Fallback utility classes for custom Tailwind colors
-  Some CDNs or build setups may not generate `bg-primary`/`text-primary` utilities;
-  provide small, specific fallbacks so buttons and borders display correctly. */
+   Some CDNs or build setups may not generate `bg-primary`/`text-primary` utilities;
+   provide small, specific fallbacks so buttons and borders display correctly. */
 .bg-primary{background-color:var(--primary) !important}
 .text-primary{color:var(--primary) !important}
 .border-primary{border-color:var(--primary) !important}
@@ -15,7 +15,7 @@
 .text-secondary{color:var(--secondary) !important}
 
 /* Hover classnames from Tailwind contain a colon and must be escaped in CSS selectors.
-  Provide fallbacks for common hover utilities used in the markup. */
+   Provide fallbacks for common hover utilities used in the markup. */
 .hover\:bg-primary:hover{background-color:var(--primary) !important}
 .hover\:text-white:hover{color:#fff !important}
 .hover\:bg-emerald-600:hover{background-color:#059669 !important}
@@ -29,31 +29,25 @@
 body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background-color:#f8fafc}
 
 /* Animation for reveal-on-scroll
-   Default: visible so content is accessible when JS is not present.
-   If you want JS-driven reveal animations, add `body.js-animate` (via JS)
-   and the page will animate when elements receive `.in-view`. */
+   --- ALL ANIMATION-RELATED HIDING LOGIC REMOVED FOR MAX VISIBILITY ---
+   Elements with [data-animate] now only inherit the default transition properties if needed.
+*/
 [data-animate]{
-  /* visible by default (fallback for no-JS) */
-  opacity:1;
-  transform:none;
+  /* Ensuring content is always visible and untransformed */
+  opacity: 1; 
+  transform: none; 
   transition: opacity .6s ease, transform .6s ease;
 }
 
 [data-animate].in-view{
+  /* Ensuring content is always visible and untransformed */
   opacity:1;
   transform:translateY(0);
 }
 
-/* Optional JS-driven initial hidden state: add `js-animate` to <body> when JS runs
-   to enable the original reveal-on-scroll behavior. */
-body.js-animate [data-animate]{
-  opacity:0;
-  transform:translateY(18px);
-}
-body.js-animate [data-animate].in-view{
-  opacity:1;
-  transform:translateY(0);
-}
+/* Removing the hidden state overrides that depended on JS */
+/* body.js-animate [data-animate] and body.js-animate [data-animate].in-view rules were removed. */
+
 
 /* Mobile menu visible state */
 #mobile-menu.show{display:block}
