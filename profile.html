@@ -1,142 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login / Register | EduVerse</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register | EduVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <script>
-        window.tailwind = window.tailwind || {};
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                'primary': '#4f46e5',
-                'secondary': '#10b981',
-                'light': '#e0e7ff',
-                'dark-navy': '#0f1829', 
-              }
-            }
-          }
-        }
-    </script>
+    <script>
+        window.tailwind = window.tailwind || {};
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary': '#4f46e5',
+                'secondary': '#10b981',
+                'light': '#e0e7ff',
+                'dark-navy': '#0f1829', 
+              }
+            }
+          }
+        }
+    </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="site.css">
+        <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="profile-styles.css">
 </head>
-<body class="min-h-screen antialiased text-gray-800 font-sans">
+<body class="min-h-screen antialiased text-gray-800 font-sans"> 
 
-    <header class="shadow-lg bg-white sticky top-0 z-10">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-extrabold text-primary flex items-center group">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mr-2 group-hover:scale-110 transition duration-500" viewBox="0 0 900 900" fill="none"></svg>
-                EduVerse
-            </a>
+        <header class="header"> 
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-logo group"> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="nav-logo-svg" viewBox="0 0 900 900" fill="none"></svg>
+                EduVerse
+            </a>
 
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+            <button id="mobile-menu-button" class="mobile-menu-button" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="mobile-menu-button-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
 
-            <div id="nav-links" class="hidden md:flex space-x-6">
-                <a href="profile.html" class="text-primary font-bold border-b-2 border-primary transition duration-300">Growth Profile</a>
-                <a href="features.html" class="text-gray-600 hover:text-primary font-medium transition duration-300">Core Features</a>
-                <a href="challenges.html" class="text-gray-600 hover:text-primary font-medium transition duration-300">Challenges</a>
+            <div id="nav-links" class="nav-links">
+                <a href="profile.html" class="nav-link active-link">Growth Profile</a>                 <a href="features.html" class="nav-link">Core Features</a>
+                <a href="challenges.html" class="nav-link">Challenges</a>
+            </div>
+
+            <a href="profile.html" class="btn-nav-cta">                 Start Your Journey
+            </a>
+        </nav>
+        <div id="mobile-menu" class="mobile-nav">             <div class="mobile-nav-inner">
+                <a href="profile.html" class="text-primary font-bold">Growth Profile</a>
+                <a href="features.html" class="text-gray-700">Core Features</a>
+                <a href="challenges.html" class="block text-gray-700">Challenges</a>
+                <a href="profile.html" class="btn-nav-cta" style="display: block; text-align: center;">Start Your Journey</a> 
+            </div>
+        </div>
+    </header>
+    
+    <main class="flex items-center justify-center py-12 min-h-[calc(100vh-100px)]"> 
+        <div class="w-full max-w-md">
+                        <div class="auth-card p-8 md:p-10"> 
+                                <h2 class="auth-title text-center mb-2"> 
+                    Welcome Back!
+                </h2>
+                                <p class="auth-subtitle text-center mb-8">
+                    Sign in to access your Digital Growth Profile.
+                </p>
+
+                <form class="space-y-6">
+                    <div>
+                                                <label for="email" class="form-label block">Email Address</label>
+                        <div class="mt-1">
+                                                        <input id="email" name="email" type="email" autocomplete="email" required class="form-input w-full px-4 py-3">
+                        </div>
+                    </div>
+
+                    <div>
+                                                <label for="password" class="form-label block">Password</label>
+                        <div class="mt-1">
+                                                        <input id="password" name="password" type="password" autocomplete="current-password" required class="form-input w-full px-4 py-3">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                                                        <input id="remember-me" name="remember-me" type="checkbox" class="form-checkbox h-4 w-4 border-gray-300 rounded focus:ring-primary">
+                            <label for="remember-me" class="ml-2 block text-sm text-gray-900">
+                                Remember me
+                            </label>
+                        </div>
+
+                        <div class="text-sm">
+                                                        <a href="#" class="action-link font-medium transition duration-150">
+                                Forgot your password?
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                                                <button type="submit" class="btn-auth-submit">
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-6">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                                                        <span class="divider-text px-2">
+                                Or
+                            </span>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-center text-sm text-gray-600">
+                        New to EduVerse?
+                                                <a href="#" class="action-link font-medium transition duration-150">
+                            Create a free account
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+        <footer class="footer">
+        <div class="footer-container">
             </div>
-
-            <a href="profile.html" class="hidden sm:inline-block bg-secondary text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-emerald-600 transition duration-300 transform hover:scale-105">
-                Start Your Journey
-            </a>
-        </nav>
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
-            <div class="px-4 py-3 space-y-2">
-                <a href="profile.html" class="block text-primary font-bold">Growth Profile</a>
-                <a href="features.html" class="block text-gray-700">Core Features</a>
-                <a href="challenges.html" class="block text-gray-700">Challenges</a>
-                <a href="profile.html" class="block bg-secondary text-white text-center py-2 rounded mt-2">Start Your Journey</a>
-            </div>
-        </div>
-    </header>
-    
-    <main class="flex items-center justify-center py-12 min-h-[calc(100vh-100px)]"> 
-        <div class="w-full max-w-md">
-            <div class="bg-white p-8 md:p-10 rounded-xl shadow-2xl border-t-8 border-primary">
-                <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-2">
-                    Welcome Back!
-                </h2>
-                <p class="text-center text-gray-600 mb-8">
-                    Sign in to access your Digital Growth Profile.
-                </p>
-
-                <form class="space-y-6">
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                        <div class="mt-1">
-                            <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm transition duration-150">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                        <div class="mt-1">
-                            <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm transition duration-150">
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary">
-                            <label for="remember-me" class="ml-2 block text-sm text-gray-900">
-                                Remember me
-                            </label>
-                        </div>
-
-                        <div class="text-sm">
-                            <a href="#" class="font-medium text-primary hover:text-indigo-600 transition duration-150">
-                                Forgot your password?
-                            </a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-semibold text-white bg-secondary hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition duration-150 transform hover:scale-[1.01]">
-                            Sign In
-                        </button>
-                    </div>
-                </form>
-
-                <div class="mt-6">
-                    <div class="relative">
-                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
-                            <div class="w-full border-t border-gray-300"></div>
-                        </div>
-                        <div class="relative flex justify-center text-sm">
-                            <span class="px-2 bg-white text-gray-500">
-                                Or
-                            </span>
-                        </div>
-                    </div>
-                    <p class="mt-6 text-center text-sm text-gray-600">
-                        New to EduVerse?
-                        <a href="#" class="font-medium text-primary hover:text-indigo-600 transition duration-150">
-                            Create a free account
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="bg-gray-900 text-white py-8 mt-20">
-        </footer>
-    
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            var menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    </script>
+    </footer>
+    
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('is-open'); // Using is-open from site.css
+        });
+    </script>
 </body>
 </html>
