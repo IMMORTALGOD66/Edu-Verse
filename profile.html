@@ -81,7 +81,41 @@
                             <input id="email" name="email" type="email" autocomplete="email" required class="form-input w-full px-4 py-3">
                         </div>
                     </div>
-
+          <div id="registration-details-group" class="hidden space-y-6">
+    <div>
+        <label for="full-name" class="form-label block">Full Name</label>
+        <div class="mt-1">
+            <input id="full-name" name="full-name" type="text" autocomplete="name" required class="form-input w-full px-4 py-3">
+        </div>
+    </div>
+    
+    <div class="flex space-x-4">
+        <div class="w-1/2">
+            <label for="grade" class="form-label block">Grade/Class</label>
+            <div class="mt-1">
+                <select id="grade" name="grade" required class="form-input w-full px-4 py-3 appearance-none">
+                    <option value="" disabled selected>Select Grade</option>
+                    <option value="9">Class 9</option>
+                    <option value="10">Class 10</option>
+                    <option value="11">Class 11</option>
+                    <option value="12">Class 12</option>
+                </select>
+            </div>
+        </div>
+        <div class="w-1/2">
+            <label for="domain" class="form-label block">Initial Domain</label>
+            <div class="mt-1">
+                <select id="domain" name="domain" required class="form-input w-full px-4 py-3 appearance-none">
+                    <option value="" disabled selected>Select Path</option>
+                    <option value="coding">Coding & Development</option>
+                    <option value="digital-art">Digital Art & Design</option>
+                    <option value="communication">Communication & Media</option>
+                    <option value="data-skills">Data & Analysis</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
                     <div id="password-field-group">
                         <label for="password" class="form-label block">Password</label>
                         <div class="mt-1">
