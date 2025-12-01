@@ -1,3 +1,8 @@
+// auth-toggle.js (New Constant at the top)
+// ... existing constants
+const confirmPasswordGroup = document.getElementById('confirm-password-field-group');
+const registerDetailsGroup = document.getElementById('registration-details-group'); // ADD THIS LINE
+// ...
 // auth-toggle.js - Handles switching between Login and Register forms
 
 // Variable to track the current mode (true = Login, false = Register)
