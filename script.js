@@ -1,3 +1,4 @@
+alert("The Brain is Awake!");
 let isRegisterMode = false;
 
 // 1. Toggles the UI between Sign In and Register
