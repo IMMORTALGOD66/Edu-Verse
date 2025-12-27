@@ -1,9 +1,8 @@
 let isRegisterMode = false;
 
-// 1. Function to switch between Login and Register
+// 1. Toggles the UI between Sign In and Register
 function toggleAuthMode(event) {
     if(event) event.preventDefault();
-    
     isRegisterMode = !isRegisterMode;
     
     const title = document.getElementById('auth-header-title');
@@ -11,12 +10,12 @@ function toggleAuthMode(event) {
     const submitBtn = document.getElementById('auth-submit-button');
     const regGroup = document.getElementById('registration-details-group');
     const loginOptions = document.getElementById('login-options-group');
-    const toggleText = document.getElementById('auth-toggle-text');
     const toggleLink = document.getElementById('auth-toggle-link');
+    const toggleText = document.getElementById('auth-toggle-text');
 
     if (isRegisterMode) {
-        title.innerText = "Begin Journey";
-        subtitle.innerText = "Select your character growth path.";
+        title.innerText = "Join EduVerse";
+        subtitle.innerText = "Create your account to start growing.";
         submitBtn.innerText = "Register Now";
         regGroup.classList.remove('hidden');
         loginOptions.classList.add('hidden');
@@ -33,7 +32,7 @@ function toggleAuthMode(event) {
     }
 }
 
-// 2. Handle Form Submission (The "Brain")
+// 2. The main "Brain" that handles button clicks
 document.getElementById('auth-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -41,20 +40,46 @@ document.getElementById('auth-form').addEventListener('submit', function(e) {
     const password = document.getElementById('password').value;
 
     if (isRegisterMode) {
+        // --- REGISTRATION LOGIC ---
         const name = document.getElementById('full-name').value;
-        const focus = document.getElementById('growth-focus').value;
+        const grade = document.getElementById('grade').value;
         const confirmPass = document.getElementById('confirm-password').value;
+
+        if (!name || !grade) {
+            alert("Please fill in your name and grade.");
+            return;
+        }
 
         if (password !== confirmPass) {
             alert("Passwords do not match!");
             return;
         }
 
-        console.log("REGISTERING USER...");
-        console.log("Name:", name, "| Focus Area:", focus);
-        alert(`Welcome ${name}! Your profile is now set to focus on ${focus}.`);
+        // Create the user object
+        const newUser = {
+            name: name,
+            grade: grade,
+            email: email,
+            password: password 
+        };
+
+        // Save to browser memory (Local Storage)
+        localStorage.setItem('userData', JSON.stringify(newUser));
+
+        alert("Registration Successful! Now you can Sign In.");
+        toggleAuthMode(); // Switch back to login mode automatically
+        
     } else {
-        console.log("LOGGING IN USER...");
-        alert("Logging in with: " + email);
+        // --- LOGIN LOGIC ---
+        // Get the saved user from memory
+        const savedUser = JSON.parse(localStorage.getItem('userData'));
+
+        if (savedUser && savedUser.email === email && savedUser.password === password) {
+            alert("Login Successful! Redirecting to your Profile...");
+            // This sends the user to the next page
+            window.location.href = "profile-view.html"; 
+        } else {
+            alert("Account not found or wrong password. Have you registered yet?");
+        }
     }
 });
