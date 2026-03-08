@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head>
+    <title>EduVerse | Welcome</title>
+
+    <script>
+        (function() {
+            const user = localStorage.getItem('eduVerse_User');
+            if (user && (window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/'))) {
+                window.location.href = 'profile.html';
+            }
+        })();
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head><head>
+    <title>EduVerse | Welcome</title>
+
+    <script>
+        (function() {
+            const user = localStorage.getItem('eduVerse_User');
+            if (user && (window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/'))) {
+                window.location.href = 'profile.html';
+            }
+        })();
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduVerse | Your Universe of Learning</title>
