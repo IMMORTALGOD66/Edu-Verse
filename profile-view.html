@@ -3,51 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduVerse | My Growth Profile</title>
+    <title>EduVerse | Growth Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="profile-view.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-[#0f172a] text-slate-300 min-h-screen font-sans selection:bg-indigo-500/30">
 
-<body class="bg-dark-navy text-slate-300 min-h-screen font-sans">
-
-    <header class="p-4 border-b border-slate-800 bg-dark-navy/50 backdrop-blur-md sticky top-0 z-50">
-        <nav class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-primary font-black text-xl tracking-tighter">EDUVERSE</a>
-            <button onclick="logout()" class="text-xs font-bold text-slate-500 hover:text-red-400 uppercase tracking-widest">Logout</button>
+    <header class="p-4 border-b border-slate-800 bg-[#0f172a]/80 backdrop-blur-md sticky top-0 z-50">
+        <nav class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-indigo-500 font-black text-2xl tracking-tighter hover:opacity-80 transition-opacity">EDUVERSE</a>
+            <div class="flex items-center gap-6">
+                <span id="user-rank" class="hidden md:block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Rank: Novice Explorer</span>
+                <button onclick="logout()" class="text-xs font-bold text-slate-500 hover:text-red-400 uppercase tracking-widest transition-colors">Logout</button>
+            </div>
         </nav>
     </header>
 
-    <main class="max-w-4xl mx-auto p-6">
-        <div class="mb-10">
-            <h1 class="text-4xl font-bold text-white mb-2">Welcome back, <span id="display-name" class="text-primary">Explorer</span>!</h1>
-            <p class="text-slate-400">Class <span id="display-grade">--</span> | Your character development journey continues.</p>
-        </div>
+    <main class="max-w-4xl mx-auto p-6 py-12">
+        <section class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <h1 class="text-5xl font-extrabold text-white mb-3 tracking-tight">
+                    Hey, <span id="display-name" class="text-indigo-400">Explorer</span>!
+                </h1>
+                <p class="text-slate-400 text-lg">
+                    Class <span id="display-grade" class="text-white font-semibold">9</span> • 
+                    <span class="text-indigo-300/80">7 day streak 🔥</span>
+                </p>
+            </div>
+            <div class="flex gap-3">
+                <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-2xl text-center min-w-[100px]">
+                    <p class="text-[10px] uppercase text-slate-500 font-bold mb-1">Total XP</p>
+                    <p id="total-xp" class="text-2xl font-black text-white">1,240</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="stat-card">
-                <div class="flex justify-between mb-4">
-                    <h3 class="font-bold text-white uppercase tracking-wider">Self-Discipline</h3>
-                    <span class="text-primary font-mono">LVL 1</span>
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+            <div class="stat-card group bg-slate-900/40 p-8 rounded-3xl border border-slate-800 hover:border-indigo-500/40 transition-all duration-500">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-black text-white uppercase tracking-widest text-xs">Self-Discipline</h3>
+                    <span class="bg-indigo-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-[0_0_15px_rgba(79,70,229,0.4)]">LVL 2</span>
                 </div>
-                <div class="progress-bar mb-2">
-                    <div class="progress-fill" style="width: 35%;"></div>
+                <div class="h-4 w-full bg-slate-800 rounded-full overflow-hidden mb-4 p-[3px]">
+                    <div class="h-full bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-full transition-all duration-1000" style="width: 65%;"></div>
                 </div>
-                <p class="text-xs text-slate-500">Complete daily focus tasks to increase.</p>
+                <p class="text-xs text-slate-500 leading-relaxed italic">"Mastery of the self is the first step to greatness."</p>
             </div>
 
-            <div class="stat-card">
-                <div class="flex justify-between mb-4">
-                    <h3 class="font-bold text-white uppercase tracking-wider">Resilience</h3>
-                    <span class="text-secondary font-mono">LVL 1</span>
+            <div class="stat-card group bg-slate-900/40 p-8 rounded-3xl border border-slate-800 hover:border-emerald-500/40 transition-all duration-500">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-black text-white uppercase tracking-widest text-xs">Resilience</h3>
+                    <span class="bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.4)]">LVL 1</span>
                 </div>
-                <div class="progress-bar mb-2">
-                    <div class="progress-fill" style="width: 20%;"></div>
+                <div class="h-4 w-full bg-slate-800 rounded-full overflow-hidden mb-4 p-[3px]">
+                    <div class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.2)]" style="width: 40%;"></div>
                 </div>
-                <p class="text-xs text-slate-500">Earned by attempting difficult challenges.</p>
+                <p class="text-xs text-slate-500 leading-relaxed italic">"The harder the struggle, the more glorious the triumph."</p>
             </div>
         </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                <span class="h-[2px] w-12 bg-indigo-500 rounded-full"></span>
+                Unlocked Achievements
+            </h2>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-5">
+                <div class="badge-slot unlocked" title="Early Bird: Active for 5 days straight">
+                    <span class="text-3xl">🌅</span>
+                </div>
+                <div class="badge-slot unlocked" title="Problem Solver: Completed 10 challenges">
+                    <span class="text-3xl">🧩</span>
+                </div>
+                <div class="badge-slot locked">
+                    <span class="text-3xl opacity-20">🛡️</span>
+                </div>
+                <div class="badge-slot locked">
+                    <span class="text-3xl opacity-20">💎</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-indigo-600/5 border border-indigo-500/10 rounded-3xl p-8">
+            <h2 class="text-xl font-bold text-white mb-6">Recent Peer Endorsements</h2>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start p-4 bg-slate-800/30 rounded-2xl border border-slate-700/50">
+                    <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center font-bold text-white">SJ</div>
+                    <div>
+                        <p class="text-sm text-slate-200"><span class="font-bold">Sarah J.</span> endorsed your <span class="text-emerald-400 font-bold">Resilience</span></p>
+                        <p class="text-xs text-slate-500 mt-1">"Great job on that tough math project today!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script src="profile-view.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
