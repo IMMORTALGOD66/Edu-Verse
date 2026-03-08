@@ -1,0 +1,37 @@
+/* 1. Global settings */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Ensures the background is always that deep space blue */
+    background-color: #0f1829;
+    overflow-x: hidden;
+}
+
+/* 2. Button Glow Effect */
+/* Add the class 'glow' to any button in HTML to use this */
+.glow:hover {
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* 3. Smooth Mobile Menu (We'll use this in the script later) */
+.mobile-nav-hidden {
+    display: none;
+    opacity: 0;
+}
+
+.mobile-nav-visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* 4. Text Gradient for the Logo */
+.logo-text {
+    background: linear-gradient(to right, #00d9ff, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
