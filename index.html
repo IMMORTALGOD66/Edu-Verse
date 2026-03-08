@@ -27,121 +27,88 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-space-dark text-slate-200 antialiased">
 
-    <header class="sticky top-0 z-50 bg-space-dark/95 backdrop-blur-sm border-b border-white/5">
+<body class="bg-space-dark text-slate-200 antialiased selection:bg-edu-primary selection:text-space-dark">
+
+    <header class="sticky top-0 z-40 bg-space-dark/80 backdrop-blur-md border-b border-white/5">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center text-xl font-extrabold text-white group hover:text-edu-primary transition">
-                <div class="w-10 h-10 mr-2">
-                    <svg viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="450" cy="450" r="400" fill="#00d9ff" fill-opacity="0.1"/>
-                        <path d="M450 200L250 450L450 700L650 450L450 200Z" fill="#00d9ff" />
-                    </svg>
-                </div>
+            <div class="flex items-center text-2xl font-black text-white group">
+                <span class="text-edu-primary mr-2 group-hover:rotate-12 transition-transform">◈</span> 
                 EduVerse
-            </a>
-
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#" class="hover:text-edu-primary transition">Features</a>
-                <a href="#" class="hover:text-edu-primary transition">Challenges</a>
-                <a href="profile.html" class="px-6 py-2 bg-edu-secondary text-white font-bold rounded-full hover:scale-105 transition">Start Journey</a>
             </div>
-
-            <button id="mobile-menu-button" class="md:hidden text-edu-primary">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+            
+            <div class="hidden md:flex space-x-8 items-center font-semibold text-sm tracking-wide">
+                <a href="#" class="hover:text-edu-primary transition">FEATURES</a>
+                <a href="#" class="hover:text-edu-primary transition">COMMUNITY</a>
+                <button onclick="showLogin()" class="px-6 py-2 bg-edu-secondary text-white rounded-full hover:scale-105 transition shadow-lg shadow-edu-secondary/20">
+                    START JOURNEY
+                </button>
+            </div>
         </nav>
-
-        <div id="mobile-menu" class="mobile-nav md:hidden bg-space-light">
-            <div class="p-6 flex flex-col space-y-4">
-                <a href="#" class="text-lg">Features</a>
-                <a href="#" class="text-lg">Challenges</a>
-                <a href="profile.html" class="w-full py-3 bg-edu-primary text-space-dark text-center font-bold rounded-xl">Start Journey</a>
-            </div>
-        </div>
     </header>
 
     <main>
         <section class="container mx-auto px-6 py-24 text-center">
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            <div class="inline-block px-4 py-1.5 mb-6 border border-edu-primary/30 rounded-full bg-edu-primary/5 text-edu-primary text-xs font-bold tracking-widest uppercase">
+                The Future of Education
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tighter">
                 Beyond Marks: <br>
                 <span class="text-edu-primary italic">Holistic Learning</span>
             </h1>
-            <p class="max-w-2xl mx-auto text-slate-400 text-lg md:text-xl mb-10">
-                Tracking real-world skill mastery, character growth, and creative expression. Welcome to the future of education.
+            <p class="max-w-2xl mx-auto text-slate-400 text-lg md:text-xl mb-12 leading-relaxed">
+                We believe growth isn't just a grade. Track your skill mastery, build your character, and showcase your creativity in a digital universe designed for you.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="profile.html" class="px-10 py-4 bg-edu-primary text-space-dark font-black rounded-xl hover:shadow-[0_0_20px_rgba(0,217,255,0.4)] transition">
-                    CREATE PROFILE
-                </a>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <button onclick="showLogin()" class="px-12 py-5 bg-edu-primary text-space-dark font-black rounded-2xl hover:shadow-[0_0_30px_rgba(0,217,255,0.4)] hover:-translate-y-1 transition-all">
+                    CREATE YOUR PROFILE
+                </button>
+            </div>
+        </main>
+
+        <section class="container mx-auto px-6 py-20">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-edu-primary/50 transition-colors group">
+                    <div class="w-12 h-12 bg-edu-primary/10 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">🚀</div>
+                    <h3 class="text-xl font-bold mb-3">Skill Mastery</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Real-time tracking for programming, arts, and academic excellence.</p>
+                </div>
+                <div class="p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-edu-secondary/50 transition-colors group">
+                    <div class="w-12 h-12 bg-edu-secondary/10 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">🛡️</div>
+                    <h3 class="text-xl font-bold mb-3">Character</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Build resilience and discipline. Log your personal growth milestones.</p>
+                </div>
+                <div class="p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-edu-accent/50 transition-colors group">
+                    <div class="w-12 h-12 bg-edu-accent/10 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">🎨</div>
+                    <h3 class="text-xl font-bold mb-3">Creativity</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Turn your ideas into projects and share your innovation with others.</p>
+                </div>
             </div>
         </section>
-        <section class="container mx-auto px-6 py-20 border-t border-white/5">
-        <div class="grid md:grid-cols-3 gap-8">
-            
-            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-edu-primary transition group">
-                <div class="text-edu-primary text-3xl mb-4 group-hover:scale-110 transition">🚀</div>
-                <h3 class="text-xl font-bold mb-2">Skill Mastery</h3>
-                <p class="text-slate-400 text-sm">Beyond rote learning. Track your progress in coding, design, and logic.</p>
-            </div>
-
-            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-edu-secondary transition group">
-                <div class="text-edu-secondary text-3xl mb-4 group-hover:scale-110 transition">🛡️</div>
-                <h3 class="text-xl font-bold mb-2">Character</h3>
-                <p class="text-slate-400 text-sm">Measure your resilience, leadership, and how you help your community.</p>
-            </div>
-
-            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-edu-accent transition group">
-                <div class="text-edu-accent text-3xl mb-4 group-hover:scale-110 transition">🎨</div>
-                <h3 class="text-xl font-bold mb-2">Creativity</h3>
-                <p class="text-slate-400 text-sm">Showcase your innovation and how you solve real-world problems.</p>
-            </div>
-
-        </div>
-    </section>
     </main>
-    <footer class="bg-space-dark border-t border-white/5 pt-16 pb-8">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                
-                <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-2xl font-black text-edu-primary mb-4">EDUVERSE</h3>
-                    <p class="text-slate-400 max-w-sm mb-6">
-                        A smart system for holistic learning. Empowering students to grow beyond the classroom.
-                    </p>
-                    <div class="flex space-x-4">
-                        <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-edu-primary/20 transition cursor-pointer">🐦</div>
-                        <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-edu-primary/20 transition cursor-pointer">📸</div>
-                        <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-edu-primary/20 transition cursor-pointer">🐙</div>
-                    </div>
-                </div>
 
-                <div>
-                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Platform</h4>
-                    <ul class="space-y-2 text-slate-400 text-sm">
-                        <li><a href="#" class="hover:text-edu-primary transition">Features</a></li>
-                        <li><a href="#" class="hover:text-edu-primary transition">Challenges</a></li>
-                        <li><a href="profile.html" class="hover:text-edu-primary transition">Growth Profile</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Community</h4>
-                    <ul class="space-y-2 text-slate-400 text-sm">
-                        <li><a href="#" class="hover:text-edu-primary transition">Student Forum</a></li>
-                        <li><a href="#" class="hover:text-edu-primary transition">Instructor View</a></li>
-                        <li><a href="#" class="hover:text-edu-primary transition">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pt-8 border-t border-white/5 text-center">
-                <p class="text-slate-500 text-xs">
-                    &copy; 2026 EduVerse. Built for students, by students.
-                </p>
-            </div>
-        </div>
+    <footer class="border-t border-white/5 py-12 text-center">
+        <p class="text-slate-500 text-sm font-medium tracking-wide italic">"Every explorer starts somewhere."</p>
     </footer>
+
+    <div id="login-modal" class="fixed inset-0 bg-space-dark/95 backdrop-blur-xl z-[100] hidden flex items-center justify-center p-6 transition-all duration-500">
+        <div class="bg-space-light border border-edu-primary/20 p-10 rounded-[2.5rem] max-w-sm w-full shadow-2xl">
+            <h2 class="text-3xl font-black text-white mb-2 tracking-tight">Welcome</h2>
+            <p class="text-slate-400 text-sm mb-8">Ready to initialize your EduVerse profile?</p>
+            
+            <div class="mb-6">
+                <label class="text-[10px] uppercase font-black text-edu-primary tracking-widest block mb-2 px-1">Identity Name</label>
+                <input type="text" id="user-name-input" placeholder="e.g. Aryan" 
+                    class="w-full bg-space-dark border border-white/10 rounded-2xl px-5 py-4 text-white focus:border-edu-primary focus:ring-1 focus:ring-edu-primary outline-none transition-all font-semibold">
+            </div>
+            
+            <button onclick="finalizeAccount()" 
+                class="w-full py-5 bg-edu-primary text-space-dark font-black rounded-2xl hover:scale-[1.02] active:scale-95 transition-all">
+                ENTER UNIVERSE
+            </button>
+            <button onclick="document.getElementById('login-modal').classList.add('hidden')" class="w-full mt-4 text-slate-500 text-xs font-bold hover:text-white transition">CANCEL</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
