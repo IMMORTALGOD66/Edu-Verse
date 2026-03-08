@@ -31,3 +31,45 @@ function logout() {
 
 // Initialize on load
 window.onload = initProfile;
+// Function to update a specific growth pillar
+function updateStat(pillarId, amount) {
+    // pillarId should be 'discipline' or 'resilience'
+    const pillar = userData.pillars[pillarId];
+    
+    // Update the data
+    pillar.xp += amount;
+    
+    // Check for Level Up (every 100 XP for this example)
+    if (pillar.xp >= 100) {
+        pillar.level += 1;
+        pillar.xp = pillar.xp - 100; // Reset XP but keep the overflow
+        alert(`CONGRATS! Your ${pillarId} leveled up to LVL ${pillar.level}!`);
+    }
+
+    // Refresh the UI
+    renderStats();
+}
+
+// Function to sync the UI with the data
+function renderStats() {
+    // Discipline Update
+    const discBar = document.querySelector('.stat-card:nth-child(1) .progress-fill');
+    const discLvl = document.querySelector('.stat-card:nth-child(1) .bg-indigo-600');
+    discBar.style.width = `${userData.pillars.discipline.xp}%`;
+    discLvl.textContent = `LVL ${userData.pillars.discipline.level}`;
+
+    // Resilience Update
+    const resBar = document.querySelector('.stat-card:nth-child(2) .progress-fill');
+    const resLvl = document.querySelector('.stat-card:nth-child(2) .bg-emerald-600');
+    resBar.style.width = `${userData.pillars.resilience.xp}%`;
+    resLvl.textContent = `LVL ${userData.pillars.resilience.level}`;
+}
+
+// Update your userData object to track levels properly
+const userData = {
+    name: "Alex",
+    pillars: {
+        discipline: { xp: 65, level: 2 },
+        resilience: { xp: 40, level: 1 }
+    }
+};
