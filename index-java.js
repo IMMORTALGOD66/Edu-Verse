@@ -1,40 +1,45 @@
 // --- 1. THE GATEKEEPER ---
-// Check if the user is already "Logged In"
 const savedUser = JSON.parse(localStorage.getItem('eduVerse_User'));
 
-// If a user exists AND we are currently on index.html, skip to profile
-if (savedUser && window.location.pathname.includes('index.html')) {
+// Instant redirect if logged in
+if (savedUser && (window.location.pathname.includes('index.html') || window.location.pathname === '/')) {
     window.location.href = 'profile.html';
 }
 
 // --- 2. LANDING PAGE LOGIC ---
 document.addEventListener('DOMContentLoaded', () => {
     console.log("EduVerse System: Online");
-
-    // Mobile Menu Logic
-    const menuBtn = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('is-open');
-        });
-    }
 });
 
-// --- 3. THE "START" FUNCTION ---
-// This runs when they click "Create Profile" for the first time
-function createFirstProfile() {
+// --- 3. SHOW THE LOGIN MODAL ---
+// This runs when you click the "CREATE PROFILE" button
+function showLogin() {
+    const modal = document.getElementById('login-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+    }
+}
+
+// --- 4. FINALIZE ACCOUNT ---
+// This runs when you click "ENTER UNIVERSE" inside the popup
+function finalizeAccount() {
+    const nameInput = document.getElementById('user-name-input').value;
+    
+    if (nameInput.trim() === "") {
+        alert("Please enter a name to initialize your profile!");
+        return;
+    }
+
     const newUser = {
-        name: "Explorer",
-        joinedDate: new Date().toLocaleDateString(),
-        xp: 0,
-        level: 1
+        name: nameInput,
+        date: new Date().toLocaleDateString('en-GB'), // Matches the profile display
+        stats: { discipline: 0, resilience: 0 },      // Vital for the progress bars
+        levels: { discipline: 1, resilience: 1 }     // Vital for the level display
     };
     
-    // Save them to memory
+    // Save to browser memory
     localStorage.setItem('eduVerse_User', JSON.stringify(newUser));
     
-    // Send them to the profile
+    // Teleport to dashboard
     window.location.href = 'profile.html';
 }
