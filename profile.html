@@ -1,17 +1,21 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduVerse | Profile</title>
+    <title>EduVerse | Growth Profile</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         'space-dark': '#0f1829',
+                        'space-light': '#1d2a40',
                         'edu-primary': '#00d9ff',
                         'edu-secondary': '#a855f7',
                     }
@@ -19,64 +23,70 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="index-style.css">
 </head>
-<body class="bg-space-dark text-slate-200">
+<body class="bg-space-dark text-slate-200 antialiased font-sans">
 
-    <nav class="p-6 border-b border-white/5 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-edu-primary rounded-lg flex items-center justify-center text-space-dark font-black">E</div>
-            <span class="font-bold tracking-tighter">EDUVERSE</span>
+    <nav class="border-b border-white/5 bg-space-dark/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center text-xl font-black text-white">
+                <span class="text-edu-primary mr-2">◈</span> EduVerse
+            </div>
+            <button onclick="resetData()" class="text-[10px] text-slate-500 hover:text-red-400 font-black tracking-widest transition uppercase">
+                Terminate Session
+            </button>
         </div>
-        <button onclick="logout()" class="text-xs text-slate-500 hover:text-red-400 font-bold uppercase tracking-widest">Reset Profile</button>
     </nav>
 
-    <main class="max-w-4xl mx-auto p-6 py-12">
+    <main class="container mx-auto px-6 py-12 max-w-5xl">
         <header class="mb-12">
-            <h1 class="text-4xl font-black mb-2">Welcome back, <span id="user-name" class="text-edu-primary italic">Explorer</span></h1>
-            <p class="text-slate-500">Your journey began on <span id="joined-date">...</span></p>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-2">
+                Welcome, <span id="display-name" class="text-edu-primary italic">Explorer</span>
+            </h1>
+            <p class="text-slate-500 font-medium">Journey Initiated: <span id="display-date" class="text-slate-300">--/--/--</span></p>
         </header>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid md:grid-cols-2 gap-8">
             
-            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl relative overflow-hidden group">
-                <div class="flex justify-between items-start mb-6">
+            <div class="bg-space-light/30 border border-white/5 p-8 rounded-[2rem] hover:border-edu-primary/30 transition-all group">
+                <div class="flex justify-between items-start mb-8">
                     <div>
-                        <h3 class="text-white font-bold uppercase text-xs tracking-widest mb-1">Self-Discipline</h3>
-                        <p class="text-slate-400 text-xs">Focus and Consistency</p>
+                        <h3 class="text-white font-black uppercase text-xs tracking-[0.2em] mb-1">Self-Discipline</h3>
+                        <p class="text-slate-500 text-xs italic">Focus & Consistency</p>
                     </div>
-                    <span id="disc-lvl" class="bg-edu-primary text-space-dark text-[10px] font-black px-2 py-1 rounded">LVL 1</span>
+                    <div id="disc-lvl" class="bg-edu-primary/10 text-edu-primary text-xs font-black px-3 py-1 rounded-lg border border-edu-primary/20">LVL 1</div>
                 </div>
                 
-                <div class="h-2 w-full bg-white/5 rounded-full overflow-hidden mb-4">
-                    <div id="disc-fill" class="h-full bg-edu-primary shadow-[0_0_10px_#00d9ff] transition-all duration-700" style="width: 0%"></div>
+                <div class="h-3 w-full bg-space-dark rounded-full mb-8 overflow-hidden border border-white/5">
+                    <div id="disc-fill" class="h-full bg-edu-primary shadow-[0_0_20px_#00d9ff] transition-all duration-1000" style="width: 0%"></div>
                 </div>
 
-                <button onclick="addXP('discipline', 10)" class="w-full py-2 rounded-xl bg-edu-primary/10 border border-edu-primary/20 text-edu-primary text-xs font-bold hover:bg-edu-primary hover:text-space-dark transition-all">
-                    +10 FOCUS XP
+                <button onclick="addXP('discipline')" class="w-full py-4 bg-edu-primary/5 border border-edu-primary/20 text-edu-primary text-xs font-black rounded-xl hover:bg-edu-primary hover:text-space-dark transition-all uppercase tracking-widest">
+                    Log Focus Session
                 </button>
             </div>
 
-            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl relative overflow-hidden group">
-                <div class="flex justify-between items-start mb-6">
+            <div class="bg-space-light/30 border border-white/5 p-8 rounded-[2rem] hover:border-edu-secondary/30 transition-all group">
+                <div class="flex justify-between items-start mb-8">
                     <div>
-                        <h3 class="text-white font-bold uppercase text-xs tracking-widest mb-1">Resilience</h3>
-                        <p class="text-slate-400 text-xs">Overcoming Challenges</p>
+                        <h3 class="text-white font-black uppercase text-xs tracking-[0.2em] mb-1">Resilience</h3>
+                        <p class="text-slate-500 text-xs italic">Overcoming Obstacles</p>
                     </div>
-                    <span id="res-lvl" class="bg-edu-secondary text-white text-[10px] font-black px-2 py-1 rounded">LVL 1</span>
+                    <div id="res-lvl" class="bg-edu-secondary/10 text-edu-secondary text-xs font-black px-3 py-1 rounded-lg border border-edu-secondary/20">LVL 1</div>
                 </div>
                 
-                <div class="h-2 w-full bg-white/5 rounded-full overflow-hidden mb-4">
-                    <div id="res-fill" class="h-full bg-edu-secondary shadow-[0_0_10px_#a855f7] transition-all duration-700" style="width: 0%"></div>
+                <div class="h-3 w-full bg-space-dark rounded-full mb-8 overflow-hidden border border-white/5">
+                    <div id="res-fill" class="h-full bg-edu-secondary shadow-[0_0_20px_#a855f7] transition-all duration-1000" style="width: 0%"></div>
                 </div>
 
-                <button onclick="addXP('resilience', 10)" class="w-full py-2 rounded-xl bg-edu-secondary/10 border border-edu-secondary/20 text-edu-secondary text-xs font-bold hover:bg-edu-secondary hover:text-white transition-all">
-                    +10 CHALLENGE XP
+                <button onclick="addXP('resilience')" class="w-full py-4 bg-edu-secondary/5 border border-edu-secondary/20 text-edu-secondary text-xs font-black rounded-xl hover:bg-edu-secondary hover:text-white transition-all uppercase tracking-widest">
+                    Log Challenge
                 </button>
             </div>
 
         </div>
     </main>
 
-   <script src="profile_script.js"></script>
+    <script src="profile_script.js"></script>
 </body>
 </html>
